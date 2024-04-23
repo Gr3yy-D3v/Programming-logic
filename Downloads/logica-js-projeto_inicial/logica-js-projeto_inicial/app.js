@@ -1,13 +1,14 @@
 alert('Boas vindas ao jogo do número secreto');
+let numeroMaximo = 100;
 //A função parseInt() analisa um argumento string e retorna um inteiro na base especificada.
 //A função Math.random() é usado para retornar um número pseudoaleatório de ponto flutuante entre 0 e 1(exclusivo)
-let numeroSecreto = parseInt(Math.random() * 100 + 1);
+let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
 let chute;
 let tentativas = 1;
 
 //enquanto o chute não for igual ao número secreto
 while (chute != numeroSecreto){
-    chute = prompt('Escolha um número entre 1 e 100'); 
+    chute = prompt(`Escolha um número entre 1 e 100`); 
     if(numeroSecreto == chute ) {
         break;
     }
